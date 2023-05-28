@@ -21,6 +21,14 @@ public class Patterns {
         letterIncrePattern(4);
         System.out.println();
         letterRepPattern(4);
+        System.out.println();
+        letterTrianglePattern(4);
+        System.out.println();
+        letterTriangleIncrePattern(4);
+        System.out.println();
+        letterTriangleDecrePattern(4);
+        System.out.println();
+        triangleincrePattern(4);
     }
 
     private static void numberPattern(int number) {
@@ -112,6 +120,49 @@ public class Patterns {
                 char ch = (char) ('A'+i+j-1);
                 System.out.print(" "+ch);
                 count++;
+            }
+            System.out.println();
+        }
+    }
+    private static void letterTrianglePattern(int number) {
+        int count = 0;
+        for ( int i = 0; i < number; i++) {
+            for ( int j = 0; j <= i; j++) {
+                char ch = (char) ('A'+i);
+                System.out.print(" "+ch);
+            }
+            System.out.println();
+        }
+    }
+    private static void letterTriangleIncrePattern(int number) {
+        int count = 0;
+        for ( int i = 0; i < number; i++) {
+            for ( int j = 0; j <= i; j++) {
+                char ch = (char) ('A'+i+j);
+                System.out.print(" "+ch);
+            }
+            System.out.println();
+        }
+    }
+    private static void letterTriangleDecrePattern(int number) {
+        int count = 0;
+        for ( int i = 1; i <= number; i++) {
+            for ( int j = i; j >= 1; j--) {
+                char ch = (char) ('A'+number-j);
+                System.out.print(" "+ch);
+            }
+            System.out.println();
+        }
+    }
+    private static void triangleincrePattern(int number) {
+        for ( int i = 1; i <= number; i++) {
+            int space = number - i;
+            while(space >= 1) {
+                System.out.print(" ");
+                space --;
+            }
+            for ( int j = 1; j <= i; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
