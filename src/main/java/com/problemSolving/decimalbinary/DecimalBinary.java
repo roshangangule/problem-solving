@@ -5,6 +5,7 @@ public class DecimalBinary {
         int ans = getBinaryNumber(1000);
         System.out.println(ans);
         int negativeNumber = getNegativeNumberBinary(-6);
+        System.out.println(negativeNumber);
     }
 
     private static int getNegativeNumberBinary(int i) {
@@ -16,9 +17,7 @@ public class DecimalBinary {
             n = n >> 1;
             i++;
         }
-
-
-        return 1;
+        return ans;
     }
 
     private static int getBinaryNumber(int n) {
