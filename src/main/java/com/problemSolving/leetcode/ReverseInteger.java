@@ -6,7 +6,28 @@ public class ReverseInteger {
         System.out.println("Reverse Number is::"+reversedNumber);
         int compliment = bitwiseCompliment(5);
         System.out.println("Compliment::"+compliment);
+        boolean isPowerOfTwo = isPowerOfTwo(-16);
+        System.out.println("Power of 2::"+isPowerOfTwo);
 
+    }
+
+    private static boolean isPowerOfTwo(int n) {
+        int count = 0;
+        int max_int = Integer.MAX_VALUE;
+        int min_int = Integer.MIN_VALUE;
+        if (n > 0 && n < max_int) {
+            while (n != 0) {
+                int bit = n & 1;
+                if (bit == 1) {
+                    count ++;
+                }
+                n = n >> 1;
+            }
+            if (count == 1) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static int bitwiseCompliment(int n) {
