@@ -7,9 +7,12 @@ public class ReverseArray {
         int arr[] = {10,2,3,4,5,23};
         int[] reverseArray = reverseArray(arr);
         printArray(reverseArray);
-        int arr1[] = {10,2,3,4,23,25};
+        int arr1[] = {10,2,3,4,23};
         int[] swapAlternativeArray = swapAlternativeArray(arr1);
-        System.out.println("Swap Alternative element");
+        System.out.println("\nSwap Alternative element");
+        printArray(swapAlternativeArray);
+        swapAlternativeArray = swapAlternativeArray2(arr1);
+        System.out.println("\nSwap Alternative element");
         printArray(swapAlternativeArray);
 
     }
@@ -27,11 +30,22 @@ public class ReverseArray {
         }
         return arr;
     }
+    private static int[] swapAlternativeArray2(int[] arr) {
+        for (int i = 0; i < arr.length; i = i+2) {
+            int j = i+1;
+            if (j < arr.length) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[i] = temp;
+            }
+        }
+        return arr;
+    }
 
     private static void printArray(int[] arr) {
         int size = arr.length;
         for (int i = 0; i < size; i++) {
-            System.out.println(arr[i]);
+            System.out.print(" "+arr[i]);
         }
     }
 
