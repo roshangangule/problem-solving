@@ -3,6 +3,8 @@ package com.problemSolving.graph;
 import java.util.*;
 
 public class GraphProb {
+
+    //graph travasal and BFS(Level Order)
     public static void main(String[] args) {
         int [][] arr = {{3,1,2,4,0,4,5,0},{4,2,3,6,1,5,6,3}};
         int n = 7;
